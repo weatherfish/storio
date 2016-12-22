@@ -64,7 +64,8 @@ public class GetResolverGeneratorTest {
         final StorIOSQLiteTypeMeta storIOSQLiteTypeMeta = new StorIOSQLiteTypeMeta(
                 "TestItem",
                 "com.test",
-                storIOSQLiteType
+                storIOSQLiteType,
+                false
         );
 
         final StorIOSQLiteColumnMeta storIOSQLiteColumnMeta1 = createColumnMetaMock(
@@ -109,7 +110,8 @@ public class GetResolverGeneratorTest {
         final StorIOSQLiteTypeMeta storIOSQLiteTypeMeta = new StorIOSQLiteTypeMeta(
                 "TestItem",
                 "com.test",
-                storIOSQLiteType
+                storIOSQLiteType,
+                false
         );
 
         final StorIOSQLiteColumnMeta storIOSQLiteColumnMeta1 = createColumnMetaMock(

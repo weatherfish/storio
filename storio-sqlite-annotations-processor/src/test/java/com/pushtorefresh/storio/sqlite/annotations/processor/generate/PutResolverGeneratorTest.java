@@ -94,7 +94,7 @@ public class PutResolverGeneratorTest {
 
         when(storIOSQLiteType.table()).thenReturn("test_table");
 
-        final StorIOSQLiteTypeMeta storIOSQLiteTypeMeta = new StorIOSQLiteTypeMeta("TestItem", "com.test", storIOSQLiteType);
+        final StorIOSQLiteTypeMeta storIOSQLiteTypeMeta = new StorIOSQLiteTypeMeta("TestItem", "com.test", storIOSQLiteType, false);
 
         final StorIOSQLiteColumnMeta storIOSQLiteColumnMeta1 = createColumnMetaMock(
                 createElementMock(NONE),
@@ -134,7 +134,7 @@ public class PutResolverGeneratorTest {
 
         when(storIOSQLiteType.table()).thenReturn("test_table");
 
-        final StorIOSQLiteTypeMeta storIOSQLiteTypeMeta = new StorIOSQLiteTypeMeta("TestItem", "com.test", storIOSQLiteType);
+        final StorIOSQLiteTypeMeta storIOSQLiteTypeMeta = new StorIOSQLiteTypeMeta("TestItem", "com.test", storIOSQLiteType, false);
 
         final StorIOSQLiteColumnMeta storIOSQLiteColumnMeta1 = createColumnMetaMock(
                 createElementMock(NONE),
