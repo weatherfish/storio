@@ -42,10 +42,10 @@ Easy ways to learn how to use `StorIO` -> check out `Documentation`, `Design Tes
 ####Download:
 ```groovy
 // If you need StorIO for SQLite
-compile 'com.pushtorefresh.storio:sqlite:1.12.0'
+compile 'com.pushtorefresh.storio:sqlite:1.12.1'
 
 // If you need StorIO for ContentResolver
-compile 'com.pushtorefresh.storio:content-resolver:1.12.0'
+compile 'com.pushtorefresh.storio:content-resolver:1.12.1'
 
 // IN StorIO 2.0 we will remove default Scheduling from Rx Operations!
 // You'll have to put subscribeOn() manually!
@@ -167,9 +167,9 @@ dependencies {
 `StorIOContentResolver`:
 ```groovy
 dependencies {
-	compile 'com.pushtorefresh.storio:storio-content-resolver-annotations:insert-latest-version-here'
+	compile 'com.pushtorefresh.storio:content-resolver-annotations:insert-latest-version-here'
 
-	apt 'com.pushtorefresh.storio:storio-content-resolver-annotations-processor:insert-latest-version-here'
+	apt 'com.pushtorefresh.storio:content-resolver-annotations-processor:insert-latest-version-here'
 }
 ```
 
@@ -210,9 +210,15 @@ public abstract class Tweet {
 }
 ```
 
-`Kotlin`
+`Kotlin`:
+
+In order to make annotation processors work with Kotlin you need to add the following to your `build.gradle`:
+```groovy
+apply plugin: 'kotlin-kapt'
+```
+
 ```kotlin
-data class Tweet @StorIOSQLiteCreator constructor(@get:StorIOSQLiteColumn(name = "author") val author: String,
+@StorIOSQLiteType(table = "tweets") data class Tweet @StorIOSQLiteCreator constructor(@get:StorIOSQLiteColumn(name = "author") val author: String,
                                                   @get:StorIOSQLiteColumn(name = "content") val content: String)
 ```
 
