@@ -42,10 +42,10 @@ Easy ways to learn how to use `StorIO` -> check out `Documentation`, `Design Tes
 ####Download:
 ```groovy
 // If you need StorIO for SQLite
-compile 'com.pushtorefresh.storio:sqlite:1.12.1'
+compile 'com.pushtorefresh.storio:sqlite:1.12.2'
 
 // If you need StorIO for ContentResolver
-compile 'com.pushtorefresh.storio:content-resolver:1.12.1'
+compile 'com.pushtorefresh.storio:content-resolver:1.12.2'
 
 // IN StorIO 2.0 we will remove default Scheduling from Rx Operations!
 // You'll have to put subscribeOn() manually!
@@ -159,8 +159,7 @@ To **save you from coding boilerplate classes** we created **Annotation Processo
 dependencies {
 	compile 'com.pushtorefresh.storio:sqlite-annotations:insert-latest-version-here'
 
-	// We recommend to use Android Gradle Apt plugin: https://bitbucket.org/hvisser/android-apt
-	apt 'com.pushtorefresh.storio:sqlite-annotations-processor:insert-latest-version-here'
+	annotationProcessor 'com.pushtorefresh.storio:sqlite-annotations-processor:insert-latest-version-here'
 }
 ```
 
@@ -169,7 +168,7 @@ dependencies {
 dependencies {
 	compile 'com.pushtorefresh.storio:content-resolver-annotations:insert-latest-version-here'
 
-	apt 'com.pushtorefresh.storio:content-resolver-annotations-processor:insert-latest-version-here'
+	annotationProcessor 'com.pushtorefresh.storio:content-resolver-annotations-processor:insert-latest-version-here'
 }
 ```
 
